@@ -39,5 +39,5 @@ public class Principal {
         System.out.println("Tiempo necesario para ver tus titulos favoritos: "
                 + calculadora.getTiempoTotal() + " minutos");
 
-    }.
+    }
 }
