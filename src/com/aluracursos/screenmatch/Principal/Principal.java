@@ -1,15 +1,17 @@
+package com.aluracursos.screenmatch.Principal;
+
 import com.aluracursos.screenmatch.calculos.CalculadoraDeTiempo;
 import com.aluracursos.screenmatch.calculos.FiltroRecomendacion;
 import com.aluracursos.screenmatch.modelos.Episodio;
 import com.aluracursos.screenmatch.modelos.Pelicula;
 import com.aluracursos.screenmatch.modelos.Serie;
 
+import java.util.ArrayList;
+
 public class Principal {
 
     public static void main(String[] args) {
-        Pelicula miPelicula = new Pelicula();
-        miPelicula.setNombre("Madame Web");
-        miPelicula.setFechaDeLanzamiento(2024);
+        Pelicula miPelicula = new Pelicula("Madame Web", 2024);
         miPelicula.setDuracionEnMinutos(117);
         miPelicula.setIncluidoEnElPlan(true);
 
@@ -20,18 +22,14 @@ public class Principal {
         System.out.println(miPelicula.getTotalDeEvaluaciones());
         System.out.println(miPelicula.calculaMedia());
 
-        Serie casaDragon = new Serie();
-        casaDragon.setNombre("La casa del dragon");
-        casaDragon.setFechaDeLanzamiento(2022);
+        Serie casaDragon = new Serie("La casa del dragon", 2022);
         casaDragon.setTemporadas(1);
         casaDragon.setMinutosPorEpisoio(50);
         casaDragon.setEpisodioPorTeporada(10);
         casaDragon.muestraFichaTecnica();
         System.out.println(casaDragon.getDuracionEnMinutos());
 
-        Pelicula otraPelicula = new Pelicula();
-        otraPelicula.setNombre("Matrix");
-        otraPelicula.setFechaDeLanzamiento(1999);
+        Pelicula otraPelicula = new Pelicula("Matrix", 1999);
         otraPelicula.setDuracionEnMinutos(136);
 
         CalculadoraDeTiempo calculadora = new CalculadoraDeTiempo();
@@ -53,5 +51,19 @@ public class Principal {
 
         filtroRecomendacion.filtro(episodio);
 
+        var peliculaDeBruno = new Pelicula("El señor de los anillos", 2001);
+        peliculaDeBruno.setDuracionEnMinutos(180);
+
+        ArrayList<Pelicula> listaDePeliculas = new ArrayList<>();
+        listaDePeliculas.add(peliculaDeBruno);
+        listaDePeliculas.add(miPelicula);
+        listaDePeliculas.add(otraPelicula);
+
+        System.out.println(("Tamaño de la lista " + listaDePeliculas));
+        System.out.println("La primerra pelicula es: " + listaDePeliculas.get(0).getNombre());
+
+        System.out.println(listaDePeliculas.toString());
+
+        System.out.println("toString de la pelicula: " + listaDePeliculas.get(0).toString());
     }
 }
