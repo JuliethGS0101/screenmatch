@@ -21,7 +21,7 @@ public class Pelicula extends Titulo implements Clasificable {
 
     @Override
     public int getClasificable() {
-        return (int) (calculaMedia() / 2);
+        return (int) (calculaMediaEvaluaciones() / 2);
     }
 
     @Override

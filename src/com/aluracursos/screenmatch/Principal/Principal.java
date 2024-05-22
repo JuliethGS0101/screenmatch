@@ -20,7 +20,7 @@ public class Principal {
         miPelicula.evalua(10);
         miPelicula.evalua(10);
         System.out.println(miPelicula.getTotalDeEvaluaciones());
-        System.out.println(miPelicula.calculaMedia());
+        System.out.println(miPelicula.calculaMediaEvaluaciones());
 
         Serie casaDragon = new Serie("La casa del dragon", 2022);
         casaDragon.setTemporadas(1);

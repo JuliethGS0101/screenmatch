@@ -3,6 +3,7 @@ package com.aluracursos.screenmatch.Principal;
 import com.aluracursos.screenmatch.modelos.Pelicula;
 import com.aluracursos.screenmatch.modelos.Serie;
 import com.aluracursos.screenmatch.modelos.Titulo;
+import com.google.gson.Gson;
 
 import java.util.ArrayList;
 import java.util.Collection;
